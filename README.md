@@ -1,0 +1,1 @@
+# Samsung Galaxy common tree for Bengal Devices
