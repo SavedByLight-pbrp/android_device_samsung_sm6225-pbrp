@@ -20,3 +20,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common pb stuff.
 $(call inherit-product, vendor/pb/config/common.mk)
+
+# Enable project quotas and casefolding for emulated storage without sdcardfs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Inherit from bengal-common device.mk
+$(call inherit-product, device/samsung/bengal-common/device.mk)
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/bengal-common/recovery/root,recovery/root)
