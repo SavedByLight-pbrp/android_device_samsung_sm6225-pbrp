@@ -8,7 +8,7 @@
 TARGET_BENGAL_COMMON := true
 
 # API levels
-PRODUCT_SHIPPING_API_LEVEL := 32
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -44,7 +44,7 @@ PRODUCT_PACKAGES += \
     tzdata_twrp
 
 # VNDK
-PRODUCT_TARGET_VNDK_VERSION := 32
+PRODUCT_TARGET_VNDK_VERSION := 30
 
 # Enable Fuse Passthrough
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.fuse.passthrough.enable=true
