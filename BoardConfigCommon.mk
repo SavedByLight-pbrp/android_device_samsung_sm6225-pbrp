@@ -48,7 +48,7 @@ TARGET_SCREEN_DENSITY := 393
 TARGET_SCREEN_HEIGHT := 1080
 TARGET_SCREEN_WIDTH := 2400
 #TW_CUSTOM_CPU_POS := 580
-TW_CUSTOM_CLOCK_POS := 250
+#TW_CUSTOM_CLOCK_POS := 250
 #TW_CUSTOM_BATTERY_POS := 800
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 500
@@ -168,7 +168,7 @@ TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone26/temp"
 
 # Modules 
 #TW_LOAD_VENDOR_BOOT_MODULES := true
-TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules)/")
+TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules)
 
 # Logging
 TARGET_USES_LOGD := true
@@ -195,4 +195,4 @@ PRODUCT_ENFORCE_VINTF_MANIFEST := true
 #PB_DISABLE_DEFAULT_PATCH_AVB2 := true
 
 # Maintainer
-MAINTAINER := SavedByLight
+MAINTAINER := "SavedByLight"
