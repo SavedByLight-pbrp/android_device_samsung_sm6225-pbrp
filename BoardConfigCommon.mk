@@ -67,7 +67,6 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
 # mkbootimg
-BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_PATH)/mkbootimg.mk \
 BOARD_MKBOOTIMG_ARGS:= \
 --dtb_offset=0x01f00000 \
 --kernel_offset=0x00008000 \
@@ -75,6 +74,7 @@ BOARD_MKBOOTIMG_ARGS:= \
 --tags_offset=0x01e00000 \
 --header_version=$(BOARD_BOOTIMG_HEADER_VERSION) \
 --dtb=$(TARGET_PREBUILT_DTB)
+BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_PATH)/mkbootimg.mk
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \
     efs \
