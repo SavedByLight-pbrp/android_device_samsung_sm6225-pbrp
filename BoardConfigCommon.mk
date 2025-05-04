@@ -1,4 +1,4 @@
-5COMMON_PATH := device/samsung/bengal-common
+COMMON_PATH := device/samsung/bengal-common
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
