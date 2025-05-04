@@ -67,7 +67,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
 # mkbootimg
-BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_PATH)/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_PATH)/mkbootimg.mk \
 BOARD_MKBOOTIMG_ARGS:= \
 --dtb_offset=0x01f00000 \
 --kernel_offset=0x00008000 \
