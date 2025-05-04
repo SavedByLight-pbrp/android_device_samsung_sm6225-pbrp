@@ -7,15 +7,12 @@
 
 TARGET_BENGAL_COMMON := true
 
-# API levels
-PRODUCT_SHIPPING_API_LEVEL := 30
-
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock \
     fastbootd 
 
 PRODUCT_PACKAGES += \
@@ -23,12 +20,6 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier \
-
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
 
 # QCOM
 PRODUCT_PACKAGES += \
@@ -42,9 +33,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # tzdata
 PRODUCT_PACKAGES += \
     tzdata_twrp
-
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 30
 
 # Enable Fuse Passthrough
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.fuse.passthrough.enable=true
