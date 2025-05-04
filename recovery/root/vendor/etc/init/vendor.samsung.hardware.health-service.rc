@@ -7,4 +7,4 @@ service vendor.health-samsung /vendor/bin/hw/vendor.samsung.hardware.health-serv
     group root
     capabilities WAKE_ALARM BLOCK_SUSPEND
     file /dev/kmsg w
-    seclabel u:r:recovery:so
+    seclabel u:r:recovery:s0
