@@ -74,7 +74,6 @@ BOARD_MKBOOTIMG_ARGS:= \
 --tags_offset=0x01e00000 \
 --header_version=$(BOARD_BOOTIMG_HEADER_VERSION) \
 --dtb=$(TARGET_PREBUILT_DTB)
-BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_PATH)/mkbootimg.mk
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \
     efs \
@@ -87,7 +86,8 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     firmware \
     metadata \
     keydata \
-    keyrefuge
+    keyrefuge \
+BOARD_CUSTOM_BOOTIMG_MK:=$(COMMON_PATH)/mkbootimg.mk
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
