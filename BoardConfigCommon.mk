@@ -1,4 +1,4 @@
-COMMON_PATH := device/samsung/bengal-common
+5COMMON_PATH := device/samsung/bengal-common
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -67,6 +67,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
 # mkbootimg
+BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_PATH)/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS:= \
 --dtb_offset=0x01f00000 \
 --kernel_offset=0x00008000 \
@@ -165,6 +166,7 @@ TW_USE_LEGACY_BATTERY_SERVICES := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone26/temp"
 #TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery/capacity"
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery.fstab
 
 # Modules 
 #TW_LOAD_VENDOR_BOOT_MODULES := true
@@ -190,9 +192,9 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
 #PRODUCT_FULL_TREBLE := true
 
-# PitchBlack
-#PB_DISABLE_DEFAULT_DM_VERITY := true
-#PB_DISABLE_DEFAULT_PATCH_AVB2 := true
+# PBRP Stuff
+PB_TORCH_PATH := "/sys/devices/virtual/camera/flash/rear_flash"
+PB_TORCH_MAX_BRIGHTNESS := 1
 
 # Maintainer
 MAINTAINER := SavedByLight
