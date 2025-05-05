@@ -88,6 +88,7 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     keydata \
     keyrefuge \
 BOARD_CUSTOM_BOOTIMG_MK := $(COMMON_PATH)/mkbootimg.mk
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_INIT_BOOTIMAGE_PARTITION_SIZE := 0x800000
@@ -169,7 +170,7 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery.fstab
 
 # Modules 
 #TW_LOAD_VENDOR_BOOT_MODULES := true
-TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules)/")
+#TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules)/")
 
 # Logging
 TARGET_USES_LOGD := true
